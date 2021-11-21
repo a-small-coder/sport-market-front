@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext"); */
+
+@font-face {
+  font-family: "UniSans";
+  font-display: swap;
+  src: url("../fonts/uni_sans_heavy-webfont.woff") format("woff"), url("../fonts/uni_sans_heavy-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Play";
+  font-display: swap;
+  src: url("../fonts/play-bold-webfont.woff") format("woff"), url("../fonts/play-bold-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
