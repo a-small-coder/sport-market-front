@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function HeaderBottom(props) {
 
@@ -6,9 +7,9 @@ function HeaderBottom(props) {
         type: 'list',
         wrapperClass: 'bottom-header__actions actions-header',
         elements: [
-            { id: 1, type: '', hrefClass: 'actions-header__item actions-header__item_login', href: '', contentText: 'Вход' },
-            { id: 2, type: '', hrefClass: 'actions-header__item actions-header__item_reg', href: '', contentText: 'Регистрация' },
-            { id: 3, type: '', hrefClass: 'actions-header__item actions-header__item_email', href: 'mailto:sport@gmail.com', contentText: 'sport@gmail.com' },
+            { id: 11, type: '', hrefClass: 'actions-header__item actions-header__item_login', href: '/login', contentText: 'Вход' },
+            { id: 12, type: '', hrefClass: 'actions-header__item actions-header__item_reg', href: '/register', contentText: 'Регистрация' },
+            { id: 13, type: '', hrefClass: 'actions-header__item actions-header__item_email', href: 'mailto:sport@gmail.com', contentText: 'sport@gmail.com' },
         ]
     }
     const rightColumnData = {
@@ -64,7 +65,7 @@ function Column(props) {
         case 'list':
             contentElements = data.elements.map(el => (
                 <li key={el.id}>
-                    <a href={el.href} class={el.hrefClass}><span>{el.contentText}</span></a>
+                    <Link key={"link"+el.id} href={el.href} class={el.hrefClass}><span>{el.contentText}</span></Link>
                 </li>
             ))
             contentElements = <ul data-da="menu__body,0,640" class={data.wrapperClass}>
@@ -83,7 +84,7 @@ function Column(props) {
                 }
                 return (
                     <div key={el.id} class={el.wrapperClass}>
-                        <a href={el.href} class={el.hrefClass}><span>{el.contentText}</span></a>
+                        <Link key={"link"+el.id} href={el.href} class={el.hrefClass}><span>{el.contentText}</span></Link>
                     </div>
                 )
             })

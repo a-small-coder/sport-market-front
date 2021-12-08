@@ -59,6 +59,9 @@ function SideBar(props) {
         //     categoryLink: "/catalog",
         //     subcategories: []
         // },
+    if (!props.showSideBar){
+        return <div/>
+    }
     return (
         <aside class="page__side">
             <SideMenu categoriesData={data}/>
@@ -69,6 +72,7 @@ function SideBar(props) {
 let mapStateToProps = (state) => {
     return {
         filterNavigation: state.catalog.categories,
+        showSideBar: state.sidebar.showSideBar
     }
 }
 
